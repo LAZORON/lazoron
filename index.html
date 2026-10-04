@@ -3,1465 +3,580 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>The Laziron Tuition Center</title>
-
-<meta name="description"
-content="The Laziron Tuition Center - Quality tuition, academic support and English courses for learners.">
-
+<meta name="description" content="The Laziron Tuition Center - Quality tuition, academic support and English courses for learners.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-
-/* =========================
-   GLOBAL
-========================= */
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-    font-family:"Inter", sans-serif;
-    color:#172033;
-    background:#f7f9fc;
-    line-height:1.6;
-}
-
-h1,h2,h3{
-    font-family:"Poppins",sans-serif;
-}
-
-a{
-    text-decoration:none;
-}
-
-.container{
-    width:90%;
-    max-width:1200px;
-    margin:auto;
-}
-
-section{
-    padding:90px 0;
-}
-
-.section-title{
-    text-align:center;
-    max-width:700px;
-    margin:0 auto 55px;
-}
-
-.section-title span{
-    color:#f3a712;
-    font-weight:700;
-    text-transform:uppercase;
-    font-size:14px;
-    letter-spacing:2px;
-}
-
-.section-title h2{
-    font-size:38px;
-    margin:10px 0 15px;
-    color:#102a43;
-}
-
-.section-title p{
-    color:#667085;
-}
-
-/* =========================
-   TOP BAR
-========================= */
-
-.topbar{
-    background:#102a43;
-    color:white;
-    font-size:14px;
-}
-
-.topbar .container{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:9px 0;
-}
-
-.topbar a{
-    color:white;
-    margin-left:20px;
-}
-
-/* =========================
-   NAVBAR
-========================= */
-
-.navbar{
-    position:sticky;
-    top:0;
-    z-index:1000;
-    background:white;
-    box-shadow:0 3px 20px rgba(0,0,0,.08);
-}
-
-.nav-container{
-    min-height:76px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-}
-
-.logo{
-    display:flex;
-    align-items:center;
-    gap:12px;
-    color:#102a43;
-}
-
-.logo-icon{
-    width:45px;
-    height:45px;
-    border-radius:12px;
-    background:#102a43;
-    color:#f3a712;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:22px;
-    font-weight:800;
-}
-
-.logo-text strong{
-    display:block;
-    font-size:17px;
-}
-
-.logo-text small{
-    color:#667085;
-    font-size:11px;
-}
-
-.nav-links{
-    display:flex;
-    align-items:center;
-    gap:25px;
-}
-
-.nav-links a{
-    color:#344054;
-    font-weight:600;
-    font-size:14px;
-}
-
-.nav-links a:hover{
-    color:#f3a712;
-}
-
-.nav-btn{
-    background:#f3a712 !important;
-    color:#102a43 !important;
-    padding:11px 18px;
-    border-radius:8px;
-}
-
-.menu-btn{
-    display:none;
-    font-size:28px;
-    cursor:pointer;
-}
-
-/* =========================
-   HERO
-========================= */
-
-.hero{
-    min-height:650px;
-    display:flex;
-    align-items:center;
-    position:relative;
-
-    background:
-    linear-gradient(90deg,
-    rgba(9,35,56,.95),
-    rgba(9,35,56,.70),
-    rgba(9,35,56,.25)),
-    url("tuition.jpg");
-
-    background-size:cover;
-    background-position:center;
-}
-
-.hero-content{
-    max-width:760px;
-    color:white;
-}
-
-.hero-badge{
-    display:inline-block;
-    background:rgba(243,167,18,.15);
-    border:1px solid rgba(243,167,18,.5);
-    color:#ffd166;
-    padding:8px 15px;
-    border-radius:30px;
-    margin-bottom:20px;
-    font-size:14px;
-    font-weight:600;
-}
-
-.hero h1{
-    font-size:58px;
-    line-height:1.1;
-    margin-bottom:22px;
-}
-
-.hero h1 span{
-    color:#f3a712;
-}
-
-.hero p{
-    font-size:19px;
-    max-width:650px;
-    color:#e5e7eb;
-    margin-bottom:32px;
-}
-
-.hero-buttons{
-    display:flex;
-    gap:15px;
-    flex-wrap:wrap;
-}
-
-.btn{
-    display:inline-block;
-    padding:14px 24px;
-    border-radius:8px;
-    font-weight:700;
-    transition:.3s;
-}
-
-.btn-primary{
-    background:#f3a712;
-    color:#102a43;
-}
-
-.btn-primary:hover{
-    transform:translateY(-3px);
-}
-
-.btn-outline{
-    border:1px solid rgba(255,255,255,.7);
-    color:white;
-}
-
-.btn-outline:hover{
-    background:white;
-    color:#102a43;
-}
-
-/* =========================
-   STATS
-========================= */
-
-.stats{
-    background:white;
-    margin-top:-45px;
-    position:relative;
-    z-index:5;
-}
-
-.stats-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    box-shadow:0 10px 35px rgba(0,0,0,.10);
-    border-radius:15px;
-    overflow:hidden;
-}
-
-.stat{
-    text-align:center;
-    padding:28px 15px;
-    border-right:1px solid #eee;
-}
-
-.stat:last-child{
-    border:none;
-}
-
-.stat h3{
-    color:#102a43;
-    font-size:30px;
-}
-
-.stat p{
-    color:#667085;
-    font-size:14px;
-}
-
-/* =========================
-   ABOUT
-========================= */
-
-.about-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:70px;
-    align-items:center;
-}
-
-.about-image{
-    min-height:430px;
-    border-radius:20px;
-
-    background:
-    linear-gradient(rgba(16,42,67,.15),rgba(16,42,67,.15)),
-    url("students.jpg");
-
-    background-size:cover;
-    background-position:center;
-}
-
-.about-content h2{
-    font-size:40px;
-    color:#102a43;
-    margin:10px 0 20px;
-}
-
-.about-content p{
-    color:#667085;
-    margin-bottom:18px;
-}
-
-.check-list{
-    list-style:none;
-    margin:25px 0;
-}
-
-.check-list li{
-    margin:12px 0;
-    font-weight:600;
-}
-
-.check-list li::before{
-    content:"✓";
-    color:#f3a712;
-    font-weight:bold;
-    margin-right:10px;
-}
-
-/* =========================
-   COURSES
-========================= */
-
-.courses{
-    background:#eef3f7;
-}
-
-.course-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:25px;
-}
-
-.course-card{
-    background:white;
-    border-radius:15px;
-    padding:32px;
-    box-shadow:0 5px 20px rgba(0,0,0,.06);
-    transition:.3s;
-}
-
-.course-card:hover{
-    transform:translateY(-7px);
-    box-shadow:0 15px 30px rgba(0,0,0,.10);
-}
-
-.course-icon{
-    width:55px;
-    height:55px;
-    background:#fff4d6;
-    color:#f3a712;
-    border-radius:12px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:25px;
-    margin-bottom:20px;
-}
-
-.course-card h3{
-    color:#102a43;
-    margin-bottom:10px;
-}
-
-.course-card p{
-    color:#667085;
-    font-size:15px;
-}
-
-/* =========================
-   WHY US
-========================= */
-
-.features-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:25px;
-}
-
-.feature{
-    padding:30px;
-    border:1px solid #e4e7ec;
-    border-radius:15px;
-    background:white;
-}
-
-.feature-number{
-    color:#f3a712;
-    font-size:28px;
-    font-weight:800;
-}
-
-.feature h3{
-    margin:10px 0;
-    color:#102a43;
-}
-
-.feature p{
-    color:#667085;
-}
-
-/* =========================
-   CTA
-========================= */
-
-.cta{
-    background:#102a43;
-    color:white;
-    text-align:center;
-}
-
-.cta h2{
-    font-size:40px;
-    margin-bottom:15px;
-}
-
-.cta p{
-    max-width:650px;
-    margin:0 auto 30px;
-    color:#d9e2ec;
-}
-
-/* =========================
-   TIMETABLE
-========================= */
-
-.table-wrapper{
-    overflow-x:auto;
-}
-
-table{
-    width:100%;
-    border-collapse:collapse;
-    background:white;
-    border-radius:12px;
-    overflow:hidden;
-}
-
-th,td{
-    padding:16px;
-    text-align:center;
-    border-bottom:1px solid #eee;
-}
-
-th{
-    background:#102a43;
-    color:white;
-}
-
-td{
-    color:#475467;
-}
-
-/* =========================
-   GALLERY
-========================= */
-
-.gallery{
-    background:#eef3f7;
-}
-
-.gallery-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:15px;
-}
-
-.gallery-item{
-    height:220px;
-    border-radius:12px;
-    overflow:hidden;
-    background:#d9e2ec;
-}
-
-.gallery-item img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    transition:.4s;
-}
-
-.gallery-item:hover img{
-    transform:scale(1.08);
-}
-
-/* =========================
-   CONTACT
-========================= */
-
-.contact-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:40px;
-}
-
-.contact-card{
-    background:white;
-    padding:35px;
-    border-radius:15px;
-    box-shadow:0 5px 20px rgba(0,0,0,.06);
-}
-
-.contact-item{
-    display:flex;
-    gap:15px;
-    margin:25px 0;
-}
-
-.contact-icon{
-    width:45px;
-    height:45px;
-    background:#fff4d6;
-    color:#f3a712;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    border-radius:10px;
-}
-
-.contact-item h4{
-    color:#102a43;
-}
-
-.contact-item p{
-    color:#667085;
-}
-
-/* =========================
-   FOOTER
-========================= */
-
-footer{
-    background:#081f31;
-    color:white;
-    padding:60px 0 25px;
-}
-
-.footer-grid{
-    display:grid;
-    grid-template-columns:2fr 1fr 1fr;
-    gap:50px;
-}
-
-footer h3{
-    margin-bottom:18px;
-}
-
-footer p,
-footer a{
-    color:#b8c4ce;
-}
-
-footer a{
-    display:block;
-    margin:8px 0;
-}
-
-.footer-bottom{
-    border-top:1px solid rgba(255,255,255,.1);
-    margin-top:40px;
-    padding-top:20px;
-    text-align:center;
-    color:#94a3b8;
-    font-size:13px;
-}
-
-/* =========================
-   WHATSAPP
-========================= */
-
-.whatsapp{
-    position:fixed;
-    right:20px;
-    bottom:20px;
-    width:58px;
-    height:58px;
-    border-radius:50%;
-    background:#25D366;
-    color:white;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:27px;
-    box-shadow:0 5px 20px rgba(0,0,0,.2);
-    z-index:2000;
-}
-
-/* =========================
-   MOBILE
-========================= */
-
+/* GLOBAL */
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:"Inter",sans-serif;color:#172033;background:#f7f9fc;line-height:1.6}
+h1,h2,h3{font-family:"Poppins",sans-serif}
+a{text-decoration:none}
+.container{width:90%;max-width:1200px;margin:auto}
+section{padding:90px 0}
+.section-title{text-align:center;max-width:700px;margin:0 auto 55px}
+.section-title span{color:#f3a712;font-weight:700;text-transform:uppercase;font-size:14px;letter-spacing:2px}
+.section-title h2{font-size:38px;margin:10px 0 15px;color:#102a43}
+.section-title p{color:#667085}
+
+/* TOP BAR */
+.topbar{background:#102a43;color:white;font-size:14px}
+.topbar .container{display:flex;justify-content:space-between;align-items:center;padding:9px 0}
+.topbar a{color:white;margin-left:20px}
+
+/* NAVBAR */
+.navbar{position:sticky;top:0;z-index:1000;background:white;box-shadow:0 3px 20px rgba(0,0,0,.08)}
+.nav-container{min-height:76px;display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:12px;color:#102a43}
+.logo-icon{width:45px;height:45px;border-radius:12px;background:#102a43;color:#f3a712;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:800}
+.logo-text strong{display:block;font-size:17px}
+.logo-text small{color:#667085;font-size:11px}
+.nav-links{display:flex;align-items:center;gap:25px}
+.nav-links a{color:#344054;font-weight:600;font-size:14px}
+.nav-links a:hover{color:#f3a712}
+.nav-btn{background:#f3a712 !important;color:#102a43 !important;padding:11px 18px;border-radius:8px}
+.menu-btn{display:none;font-size:28px;cursor:pointer}
+
+/* HERO */
+.hero{min-height:650px;display:flex;align-items:center;position:relative;
+background:linear-gradient(90deg,rgba(9,35,56,.95),rgba(9,35,56,.70),rgba(9,35,56,.25)),url("tuition.jpg");
+background-size:cover;background-position:center}
+.hero-content{max-width:760px;color:white}
+.hero-badge{display:inline-block;background:rgba(243,167,18,.15);border:1px solid rgba(243,167,18,.5);color:#ffd166;padding:8px 15px;border-radius:30px;margin-bottom:20px;font-size:14px;font-weight:600}
+.hero h1{font-size:58px;line-height:1.1;margin-bottom:22px}
+.hero h1 span{color:#f3a712}
+.hero p{font-size:19px;max-width:650px;color:#e5e7eb;margin-bottom:32px}
+.hero-buttons{display:flex;gap:15px;flex-wrap:wrap}
+.btn{display:inline-block;padding:14px 24px;border-radius:8px;font-weight:700;transition:.3s}
+.btn-primary{background:#f3a712;color:#102a43}
+.btn-primary:hover{transform:translateY(-3px)}
+.btn-outline{border:1px solid rgba(255,255,255,.7);color:white}
+.btn-outline:hover{background:white;color:#102a43}
+.btn-whatsapp{background:#25D366;color:white}
+.btn-whatsapp:hover{transform:translateY(-3px)}
+
+/* STATS */
+.stats{background:white;margin-top:-45px;position:relative;z-index:5}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);box-shadow:0 10px 35px rgba(0,0,0,.10);border-radius:15px;overflow:hidden}
+.stat{text-align:center;padding:28px 15px;border-right:1px solid #eee}
+.stat:last-child{border:none}
+.stat h3{color:#102a43;font-size:30px}
+.stat p{color:#667085;font-size:14px}
+
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.about-image{min-height:430px;border-radius:20px;
+background:linear-gradient(rgba(16,42,67,.15),rgba(16,42,67,.15)),url("students.jpg");
+background-size:cover;background-position:center}
+.about-content h2{font-size:40px;color:#102a43;margin:10px 0 20px}
+.about-content p{color:#667085;margin-bottom:18px}
+.check-list{list-style:none;margin:25px 0}
+.check-list li{margin:12px 0;font-weight:600}
+.check-list li::before{content:"✓";color:#f3a712;font-weight:bold;margin-right:10px}
+
+/* COURSES */
+.courses{background:#eef3f7}
+.course-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:25px}
+.course-card{background:white;border-radius:15px;padding:32px;box-shadow:0 5px 20px rgba(0,0,0,.06);transition:.3s}
+.course-card:hover{transform:translateY(-7px);box-shadow:0 15px 30px rgba(0,0,0,.10)}
+.course-icon{width:55px;height:55px;background:#fff4d6;color:#f3a712;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:25px;margin-bottom:20px}
+.course-card h3{color:#102a43;margin-bottom:10px}
+.course-card p{color:#667085;font-size:15px}
+
+/* WHY US */
+.features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:25px}
+.feature{padding:30px;border:1px solid #e4e7ec;border-radius:15px;background:white}
+.feature-number{color:#f3a712;font-size:28px;font-weight:800}
+.feature h3{margin:10px 0;color:#102a43}
+.feature p{color:#667085}
+
+/* REGISTRATION FORM */
+.reg-section{background:#eef3f7}
+.reg-box{max-width:650px;margin:auto;background:white;padding:30px;border-radius:15px;box-shadow:0 5px 20px rgba(0,0,0,.08)}
+.reg-box h3.reg-h{font-size:20px;margin-top:30px;padding-bottom:8px;border-bottom:2px solid #f3a712;color:#102a43}
+.reg-box h3.reg-h:first-child{margin-top:0}
+.reg-box label{display:block;font-weight:600;margin-top:15px;margin-bottom:6px;font-size:15px}
+.reg-box input,.reg-box select{width:100%;padding:12px;border:1px solid #d0d5dd;border-radius:8px;font-size:15px;font-family:inherit;background:white}
+.reg-box input:focus,.reg-box select:focus{outline:2px solid #f3a712;border-color:#f3a712}
+.req{color:#d92d20}
+.reg-gender{display:flex;gap:25px;margin-top:8px}
+.reg-box .reg-gender label{font-weight:400;margin:0;display:flex;align-items:center;gap:8px}
+.reg-box .reg-gender input,.reg-box .reg-subjects input{width:auto}
+.reg-subjects{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
+.reg-box .reg-subjects label{font-weight:400;margin:0;padding:10px;background:#f5f5f5;border-radius:7px;display:flex;align-items:center;gap:10px;cursor:pointer}
+.reg-pay{margin-top:20px;padding:18px;background:#fff8e1;border-radius:12px;border:1px solid #f0d477}
+.pay-row{display:flex;align-items:center;justify-content:space-between;gap:10px;background:white;border:1px solid #f0d477;border-radius:10px;padding:10px 14px;margin-top:10px}
+.pay-row .num{font-size:22px;font-weight:700;color:#102a43;font-family:"Poppins",sans-serif}
+.pay-row .who{font-size:12px;color:#667085;display:block}
+.reg-box button.copy-btn{width:auto;margin:0;padding:8px 14px;font-size:13px;background:#102a43;color:white}
+.pay-call{display:block;text-align:center;background:#25a244;color:white;padding:13px;border-radius:8px;font-weight:700;margin:15px 0}
+.reg-note{font-size:13px;color:#667085;margin-top:8px}
+.reg-box button{width:100%;padding:14px;margin-top:25px;border:none;border-radius:8px;background:#f3a712;color:#102a43;font-size:17px;font-weight:700;cursor:pointer;font-family:inherit}
+.reg-box button:hover{background:#e09a0c}
+.reg-box button:disabled{opacity:.6;cursor:wait}
+#formStatus{text-align:center;font-weight:700;margin-top:15px}
+#formStatus.ok{color:#16803c}
+#formStatus.err{color:#d92d20}
+.reg-or{text-align:center;margin-top:25px;color:#667085;font-size:15px}
+.reg-or a{color:#128c7e;font-weight:700}
+
+/* CTA */
+.cta{background:#102a43;color:white;text-align:center}
+.cta h2{font-size:40px;margin-bottom:15px}
+.cta p{max-width:650px;margin:0 auto 30px;color:#d9e2ec}
+
+/* TIMETABLE */
+.table-wrapper{overflow-x:auto}
+table{width:100%;border-collapse:collapse;background:white;border-radius:12px;overflow:hidden}
+th,td{padding:16px;text-align:center;border-bottom:1px solid #eee}
+th{background:#102a43;color:white}
+td{color:#475467}
+
+/* GALLERY */
+.gallery{background:#eef3f7}
+.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+.gallery-item{height:220px;border-radius:12px;overflow:hidden;background:#d9e2ec}
+.gallery-item img{width:100%;height:100%;object-fit:cover;transition:.4s}
+.gallery-item:hover img{transform:scale(1.08)}
+
+/* CONTACT */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.contact-card{background:white;padding:35px;border-radius:15px;box-shadow:0 5px 20px rgba(0,0,0,.06)}
+.contact-item{display:flex;gap:15px;margin:25px 0}
+.contact-icon{width:45px;height:45px;background:#fff4d6;color:#f3a712;display:flex;align-items:center;justify-content:center;border-radius:10px}
+.contact-item h4{color:#102a43}
+.contact-item p{color:#667085}
+
+/* FOOTER */
+footer{background:#081f31;color:white;padding:60px 0 25px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:50px}
+footer h3{margin-bottom:18px}
+footer p,footer a{color:#b8c4ce}
+footer a{display:block;margin:8px 0}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.1);margin-top:40px;padding-top:20px;text-align:center;color:#94a3b8;font-size:13px}
+
+/* WHATSAPP FLOAT */
+.whatsapp{position:fixed;right:20px;bottom:20px;width:58px;height:58px;border-radius:50%;background:#25D366;color:white;display:flex;align-items:center;justify-content:center;font-size:27px;box-shadow:0 5px 20px rgba(0,0,0,.2);z-index:2000}
+
+/* MOBILE */
 @media(max-width:900px){
-
-    .hero h1{
-        font-size:44px;
-    }
-
-    .stats-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .course-grid,
-    .features-grid{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .gallery-grid{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .about-grid,
-    .contact-grid{
-        grid-template-columns:1fr;
-    }
-
-    .footer-grid{
-        grid-template-columns:1fr 1fr;
-    }
+.hero h1{font-size:44px}
+.stats-grid{grid-template-columns:repeat(2,1fr)}
+.course-grid,.features-grid{grid-template-columns:1fr 1fr}
+.gallery-grid{grid-template-columns:1fr 1fr}
+.about-grid,.contact-grid{grid-template-columns:1fr}
+.footer-grid{grid-template-columns:1fr 1fr}
 }
-
 @media(max-width:700px){
-
-    .topbar{
-        display:none;
-    }
-
-    .nav-links{
-        display:none;
-        position:absolute;
-        top:76px;
-        left:0;
-        right:0;
-        background:white;
-        flex-direction:column;
-        padding:20px;
-        box-shadow:0 10px 20px rgba(0,0,0,.1);
-    }
-
-    .nav-links.active{
-        display:flex;
-    }
-
-    .menu-btn{
-        display:block;
-    }
-
-    .hero{
-        min-height:600px;
-    }
-
-    .hero h1{
-        font-size:38px;
-    }
-
-    .hero p{
-        font-size:16px;
-    }
-
-    .stats-grid{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .course-grid,
-    .features-grid{
-        grid-template-columns:1fr;
-    }
-
-    .gallery-grid{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .footer-grid{
-        grid-template-columns:1fr;
-    }
-
-    section{
-        padding:65px 0;
-    }
-
-    .section-title h2{
-        font-size:30px;
-    }
+.topbar{display:none}
+.nav-links{display:none;position:absolute;top:76px;left:0;right:0;background:white;flex-direction:column;padding:20px;box-shadow:0 10px 20px rgba(0,0,0,.1)}
+.nav-links.active{display:flex}
+.menu-btn{display:block}
+.hero{min-height:600px}
+.hero h1{font-size:38px}
+.hero p{font-size:16px}
+.course-grid,.features-grid{grid-template-columns:1fr}
+.footer-grid{grid-template-columns:1fr}
+section{padding:65px 0}
+.section-title h2{font-size:30px}
+.reg-box{padding:20px}
+.reg-subjects{grid-template-columns:1fr}
+.pay-row .num{font-size:18px}
 }
-
 </style>
 </head>
 
 <body>
 
 <!-- TOP BAR -->
-
 <div class="topbar">
-
 <div class="container">
-
-<div>
-📍 Tanzania
+<div>📍 Tanzania</div>
+<div>📞 0716 668 443</div>
 </div>
-
-<div>
-📞 0716 668 443
-</div>
-
-</div>
-
 </div>
 
 <!-- NAVIGATION -->
-
 <nav class="navbar">
-
 <div class="container nav-container">
-
 <a href="#home" class="logo">
-
-<div class="logo-icon">
-L
-</div>
-
-<div class="logo-text">
-
-<strong>LAZIRON</strong>
-
-<small>TUITION CENTER</small>
-
-</div>
-
+<div class="logo-icon">L</div>
+<div class="logo-text"><strong>LAZIRON</strong><small>TUITION CENTER</small></div>
 </a>
-
-<div class="menu-btn" onclick="toggleMenu()">
-☰
-</div>
-
+<div class="menu-btn" onclick="toggleMenu()">☰</div>
 <div class="nav-links" id="navLinks">
-
 <a href="#home">Home</a>
-
 <a href="#about">About</a>
-
 <a href="#courses">Courses</a>
-
 <a href="#timetable">Timetable</a>
-
 <a href="#gallery">Gallery</a>
-
 <a href="#contact">Contact</a>
-
-<a href="#register" class="nav-btn">Register</a>
-
+<a href="#registration" class="nav-btn">Register</a>
 </div>
-
 </div>
-
 </nav>
 
 <!-- HERO -->
-
 <section class="hero" id="home">
-
 <div class="container">
-
 <div class="hero-content">
-
-<div class="hero-badge">
-QUALITY EDUCATION • BETTER FUTURE
-</div>
-
-<h1>
-Unlock Your
-<span>Academic Potential</span>
-</h1>
-
-<p>
-Welcome to The Laziron Tuition Center.
-We provide quality tuition, academic support,
-examination preparation and English courses
-for learners of different ages.
-</p>
-
+<div class="hero-badge">QUALITY EDUCATION • BETTER FUTURE</div>
+<h1>Unlock Your <span>Academic Potential</span></h1>
+<p>Welcome to The Laziron Tuition Center. We provide quality tuition, academic support, examination preparation and English courses for learners of different ages.</p>
 <div class="hero-buttons">
-
-<a href="#register" class="btn btn-primary">
-Register Now →
-</a>
-
-<a href="#courses" class="btn btn-outline">
-Explore Courses
-</a>
-
+<a href="#registration" class="btn btn-primary">Register Now →</a>
+<a href="#courses" class="btn btn-outline">Explore Courses</a>
 </div>
-
 </div>
-
 </div>
-
 </section>
 
 <!-- STATS -->
-
 <div class="stats">
-
 <div class="container">
-
 <div class="stats-grid">
-
-<div class="stat">
-
-<h3>100%</h3>
-
-<p>Commitment to Learning</p>
-
+<div class="stat"><h3>100%</h3><p>Commitment to Learning</p></div>
+<div class="stat"><h3>4+</h3><p>Learning Programs</p></div>
+<div class="stat"><h3>All</h3><p>Learner Ages</p></div>
+<div class="stat"><h3>2026</h3><p>Academic Year</p></div>
 </div>
-
-<div class="stat">
-
-<h3>4+</h3>
-
-<p>Learning Programs</p>
-
 </div>
-
-<div class="stat">
-
-<h3>All</h3>
-
-<p>Learner Ages</p>
-
-</div>
-
-<div class="stat">
-
-<h3>2026</h3>
-
-<p>Academic Year</p>
-
-</div>
-
-</div>
-
-</div>
-
 </div>
 
 <!-- ABOUT -->
-
 <section id="about">
-
 <div class="container">
-
 <div class="about-grid">
-
-<div class="about-image">
-</div>
-
+<div class="about-image"></div>
 <div class="about-content">
-
 <div class="section-title" style="text-align:left;margin:0">
-
 <span>About Us</span>
-
 <h2>Learning Today. Succeeding Tomorrow.</h2>
-
 </div>
-
-<p>
-The Laziron Tuition Center is dedicated to
-supporting learners through quality teaching,
-focused revision and a positive learning environment.
-</p>
-
-<p>
-We believe every learner has the potential to improve
-when given the right guidance, practice and support.
-</p>
-
+<p>The Laziron Tuition Center is dedicated to supporting learners through quality teaching, focused revision and a positive learning environment.</p>
+<p>We believe every learner has the potential to improve when given the right guidance, practice and support.</p>
 <ul class="check-list">
-
 <li>Qualified and dedicated teaching support</li>
-
 <li>Focused academic assistance</li>
-
 <li>Examination preparation</li>
-
 <li>English language development</li>
-
 <li>Supportive learning environment</li>
-
 </ul>
-
-<a href="#register" class="btn btn-primary">
-Join Laziron
-
-</a>
-
+<a href="#registration" class="btn btn-primary">Join Laziron</a>
 </div>
-
 </div>
-
 </div>
-
 </section>
 
 <!-- COURSES -->
-
 <section class="courses" id="courses">
-
 <div class="container">
-
 <div class="section-title">
-
 <span>Our Programs</span>
-
 <h2>Courses Designed for Learners</h2>
-
-<p>
-Choose a learning program that matches your
-academic needs and goals.
-</p>
-
+<p>Choose a learning program that matches your academic needs and goals.</p>
 </div>
-
 <div class="course-grid">
-
-<div class="course-card">
-
-<div class="course-icon">📚</div>
-
-<h3>Primary Tuition</h3>
-
-<p>
-Academic support for primary school learners
-with focus on understanding and strong foundations.
-</p>
-
+<div class="course-card"><div class="course-icon">📚</div><h3>Primary Tuition</h3><p>Academic support for primary school learners with focus on understanding and strong foundations.</p></div>
+<div class="course-card"><div class="course-icon">🎓</div><h3>Secondary Tuition</h3><p>Focused tuition and revision for secondary school students across important academic subjects.</p></div>
+<div class="course-card"><div class="course-icon">🌍</div><h3>English Course</h3><p>English lessons designed for children and learners of different ages to build confidence and fluency.</p></div>
+<div class="course-card"><div class="course-icon">📝</div><h3>Exam Preparation</h3><p>Practice, revision and examination-focused learning to help students prepare effectively.</p></div>
+<div class="course-card"><div class="course-icon">💡</div><h3>Study Skills</h3><p>Develop better study habits, time management, revision techniques and learning strategies.</p></div>
+<div class="course-card"><div class="course-icon">🚀</div><h3>Holiday Classes</h3><p>Keep learning during school holidays through structured academic support and revision.</p></div>
 </div>
-
-<div class="course-card">
-
-<div class="course-icon">🎓</div>
-
-<h3>Secondary Tuition</h3>
-
-<p>
-Focused tuition and revision for secondary school
-students across important academic subjects.
-</p>
-
 </div>
-
-<div class="course-card">
-
-<div class="course-icon">🌍</div>
-
-<h3>English Course</h3>
-
-<p>
-English lessons designed for children and learners
-of different ages to build confidence and fluency.
-</p>
-
-</div>
-
-<div class="course-card">
-
-<div class="course-icon">📝</div>
-
-<h3>Exam Preparation</h3>
-
-<p>
-Practice, revision and examination-focused
-learning to help students prepare effectively.
-</p>
-
-</div>
-
-<div class="course-card">
-
-<div class="course-icon">💡</div>
-
-<h3>Study Skills</h3>
-
-<p>
-Develop better study habits, time management,
-revision techniques and learning strategies.
-</p>
-
-</div>
-
-<div class="course-card">
-
-<div class="course-icon">🚀</div>
-
-<h3>Holiday Classes</h3>
-
-<p>
-Keep learning during school holidays through
-structured academic support and revision.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
 </section>
 
 <!-- WHY LAZIRON -->
-
 <section>
+<div class="container">
+<div class="section-title">
+<span>Why Laziron?</span>
+<h2>A Better Learning Environment</h2>
+</div>
+<div class="features-grid">
+<div class="feature"><div class="feature-number">01</div><h3>Focused Learning</h3><p>Lessons are designed to help learners understand concepts rather than simply memorize answers.</p></div>
+<div class="feature"><div class="feature-number">02</div><h3>Regular Practice</h3><p>Students get opportunities to practise questions and strengthen their academic skills.</p></div>
+<div class="feature"><div class="feature-number">03</div><h3>Individual Support</h3><p>Learners receive guidance to help identify areas where additional practice is needed.</p></div>
+</div>
+</div>
+</section>
 
+<!-- REGISTRATION FORM -->
+<section class="reg-section" id="registration">
 <div class="container">
 
 <div class="section-title">
-
-<span>Why Laziron?</span>
-
-<h2>A Better Learning Environment</h2>
-
+<span>Join Us</span>
+<h2>Student Registration</h2>
+<p>Fill in the form below and we will contact you shortly.</p>
 </div>
 
-<div class="features-grid">
+<div class="reg-box">
+<form id="registrationForm">
 
-<div class="feature">
+<h3 class="reg-h">1. Student Information</h3>
 
-<div class="feature-number">01</div>
+<label>Student Full Name <span class="req">*</span></label>
+<input type="text" name="studentName" required>
 
-<h3>Focused Learning</h3>
+<label>Date of Birth <span class="req">*</span></label>
+<input type="date" name="dateOfBirth" required>
 
-<p>
-Lessons are designed to help learners understand
-concepts rather than simply memorize answers.
-</p>
-
+<label>Gender <span class="req">*</span></label>
+<div class="reg-gender">
+<label><input type="radio" name="gender" value="Male" required> Male</label>
+<label><input type="radio" name="gender" value="Female"> Female</label>
 </div>
 
-<div class="feature">
+<label>Current Class / Grade <span class="req">*</span></label>
+<select name="class" required>
+<option value="">-- Select Class --</option>
+<option>KG1</option><option>KG2</option>
+<option>Standard I</option><option>Standard II</option><option>Standard III</option><option>Standard IV</option><option>Standard V</option><option>Standard VI</option><option>Standard VII</option>
+<option>Form I</option><option>Form II</option><option>Form III</option><option>Form IV</option><option>Form V</option><option>Form VI</option>
+</select>
 
-<div class="feature-number">02</div>
-
-<h3>Regular Practice</h3>
-
-<p>
-Students get opportunities to practise questions
-and strengthen their academic skills.
-</p>
-
+<label>Subjects to Study <span class="req">*</span></label>
+<div class="reg-subjects" id="subjectsBox">
+<label><input type="checkbox" name="subjects" value="Mathematics"> Mathematics</label>
+<label><input type="checkbox" name="subjects" value="English"> English</label>
+<label><input type="checkbox" name="subjects" value="Science"> Science</label>
+<label><input type="checkbox" name="subjects" value="Geography"> Geography</label>
+<label><input type="checkbox" name="subjects" value="Biology"> Biology</label>
+<label><input type="checkbox" name="subjects" value="Chemistry"> Chemistry</label>
+<label><input type="checkbox" name="subjects" value="Physics"> Physics</label>
+<label><input type="checkbox" name="subjects" value="Kiswahili"> Kiswahili</label>
+<label><input type="checkbox" name="subjects" value="English Course"> English Course</label>
 </div>
 
-<div class="feature">
+<h3 class="reg-h">2. Parent / Guardian Information</h3>
 
-<div class="feature-number">03</div>
+<label>Parent / Guardian Full Name <span class="req">*</span></label>
+<input type="text" name="parentName" required>
 
-<h3>Individual Support</h3>
+<label>Relationship to Student <span class="req">*</span></label>
+<select name="relationship" required>
+<option value="">-- Select --</option>
+<option>Father</option><option>Mother</option><option>Guardian</option><option>Other</option>
+</select>
 
-<p>
-Learners receive guidance to help identify areas
-where additional practice is needed.
-</p>
+<label>Phone Number <span class="req">*</span></label>
+<input type="tel" name="phone" placeholder="07XXXXXXXX" required>
 
+<label>Alternative Phone Number</label>
+<input type="tel" name="alternativePhone" placeholder="07XXXXXXXX">
+
+<label>Area Where You Live <span class="req">*</span></label>
+<input type="text" name="address" placeholder="Example: Mbagala" required>
+
+<h3 class="reg-h">3. Tuition Payment</h3>
+
+<div class="reg-pay">
+<strong>Pay your tuition fee through:</strong>
+
+<div class="pay-row">
+<div><span class="num">0716 668 443</span><span class="who">Payment number 1</span></div>
+<button type="button" class="copy-btn" data-copy="0716668443">Copy</button>
+</div>
+<div class="pay-row">
+<div><span class="num">0746 515 291</span><span class="who">Payment number 2</span></div>
+<button type="button" class="copy-btn" data-copy="0746515291">Copy</button>
 </div>
 
+<a class="pay-call" href="tel:0716668443">USE PAYMENT NUMBER</a>
+
+<label>Amount Paid</label>
+<input type="number" name="amountPaid" placeholder="Enter amount in TSh">
+
+<label>Payment Method</label>
+<select name="paymentMethod">
+<option value="">-- Select Payment Method --</option>
+<option>M-Pesa</option><option>Mixx by Yas</option><option>Airtel Money</option><option>HaloPesa</option><option>Bank</option><option>Cash</option>
+</select>
+
+<label>Transaction Number</label>
+<input type="text" name="transactionNumber" placeholder="Enter transaction ID">
+
+<label>Date of Payment</label>
+<input type="date" name="paymentDate">
+
+<div class="reg-note">Please keep your payment confirmation message for reference.</div>
 </div>
 
+<button type="submit" id="submitBtn">SUBMIT REGISTRATION</button>
+<div id="formStatus"></div>
+
+</form>
 </div>
 
+<p class="reg-or">Prefer to chat? <a href="https://wa.me/255716668443" target="_blank">Register via WhatsApp</a></p>
+
+</div>
 </section>
 
-<!-- CTA -->
-
+<!-- CTA (WHATSAPP REGISTER) -->
 <section class="cta" id="register">
-
 <div class="container">
-
 <h2>Ready to Start Learning?</h2>
-
-<p>
-Join The Laziron Tuition Center and take the next
-step toward improving your academic skills.
-</p>
-
-<a href="https://wa.me/255716668443"
-class="btn btn-primary">
-Register via WhatsApp
-</a>
-
+<p>Join The Laziron Tuition Center and take the next step toward improving your academic skills.</p>
+<a href="https://wa.me/255716668443" class="btn btn-whatsapp" target="_blank">Register via WhatsApp</a>
 </div>
-
 </section>
 
 <!-- TIMETABLE -->
-
 <section id="timetable">
-
 <div class="container">
-
 <div class="section-title">
-
 <span>Schedule</span>
-
 <h2>Sample Class Timetable</h2>
-
-<p>
-Our timetable can be updated according to the
-academic program and class requirements.
-</p>
-
+<p>Our timetable can be updated according to the academic program and class requirements.</p>
 </div>
-
 <div class="table-wrapper">
-
 <table>
-
-<tr>
-
-<th>Day</th>
-<th>Morning</th>
-<th>Afternoon</th>
-<th>Evening</th>
-
-</tr>
-
-<tr>
-
-<td>Monday</td>
-<td>Primary</td>
-<td>Secondary</td>
-<td>English</td>
-
-</tr>
-
-<tr>
-
-<td>Tuesday</td>
-<td>Primary</td>
-<td>Secondary</td>
-<td>Revision</td>
-
-</tr>
-
-<tr>
-
-<td>Wednesday</td>
-<td>Primary</td>
-<td>Secondary</td>
-<td>English</td>
-
-</tr>
-
-<tr>
-
-<td>Thursday</td>
-<td>Primary</td>
-<td>Secondary</td>
-<td>Revision</td>
-
-</tr>
-
-<tr>
-
-<td>Friday</td>
-<td>Primary</td>
-<td>Secondary</td>
-<td>English</td>
-
-</tr>
-
-<tr>
-
-<td>Saturday</td>
-<td>Revision</td>
-<td>Exam Practice</td>
-<td>—</td>
-
-</tr>
-
+<tr><th>Day</th><th>Morning</th><th>Afternoon</th><th>Evening</th></tr>
+<tr><td>Monday</td><td>Primary</td><td>Secondary</td><td>English</td></tr>
+<tr><td>Tuesday</td><td>Primary</td><td>Secondary</td><td>Revision</td></tr>
+<tr><td>Wednesday</td><td>Primary</td><td>Secondary</td><td>English</td></tr>
+<tr><td>Thursday</td><td>Primary</td><td>Secondary</td><td>Revision</td></tr>
+<tr><td>Friday</td><td>Primary</td><td>Secondary</td><td>English</td></tr>
+<tr><td>Saturday</td><td>Revision</td><td>Exam Practice</td><td>—</td></tr>
 </table>
-
 </div>
-
 </div>
-
 </section>
 
 <!-- GALLERY -->
-
 <section class="gallery" id="gallery">
-
 <div class="container">
-
 <div class="section-title">
-
 <span>Our Environment</span>
-
 <h2>Gallery</h2>
-
-<p>
-A glimpse of our learning environment and activities.
-</p>
-
+<p>A glimpse of our learning environment and activities.</p>
 </div>
-
 <div class="gallery-grid">
-
-<div class="gallery-item">
-<img src="classroom.jpg" alt="Laziron classroom">
+<div class="gallery-item"><img src="classroom.jpg" alt="Laziron classroom"></div>
+<div class="gallery-item"><img src="students.jpg" alt="Students learning"></div>
+<div class="gallery-item"><img src="teacher.jpg" alt="Teacher teaching"></div>
+<div class="gallery-item"><img src="activity.jpg" alt="Student activity"></div>
 </div>
-
-<div class="gallery-item">
-<img src="students.jpg" alt="Students learning">
 </div>
-
-<div class="gallery-item">
-<img src="teacher.jpg" alt="Teacher teaching">
-</div>
-
-<div class="gallery-item">
-<img src="activity.jpg" alt="Student activity">
-</div>
-
-</div>
-
-</div>
-
 </section>
 
 <!-- CONTACT -->
-
 <section id="contact">
-
 <div class="container">
-
 <div class="section-title">
-
 <span>Get In Touch</span>
-
 <h2>Contact The Laziron Tuition Center</h2>
-
 </div>
-
 <div class="contact-grid">
-
 <div class="contact-card">
-
-<div class="contact-item">
-
-<div class="contact-icon">📞</div>
-
-<div>
-
-<h4>Phone</h4>
-
-<p>0716 668 443</p>
-
+<div class="contact-item"><div class="contact-icon">📞</div><div><h4>Phone</h4><p>0716 668 443</p></div></div>
+<div class="contact-item"><div class="contact-icon">💬</div><div><h4>WhatsApp</h4><p>0716 668 443</p></div></div>
+<div class="contact-item"><div class="contact-icon">📍</div><div><h4>Location</h4><p>Tanzania</p></div></div>
+<div class="contact-item"><div class="contact-icon">✉️</div><div><h4>Email</h4><p>Coming soon</p></div></div>
 </div>
-
-</div>
-
-<div class="contact-item">
-
-<div class="contact-icon">💬</div>
-
-<div>
-
-<h4>WhatsApp</h4>
-
-<p>0716 668 443</p>
-
-</div>
-
-</div>
-
-<div class="contact-item">
-
-<div class="contact-icon">📍</div>
-
-<div>
-
-<h4>Location</h4>
-
-<p>Tanzania</p>
-
-</div>
-
-</div>
-
-<div class="contact-item">
-
-<div class="contact-icon">✉️</div>
-
-<div>
-
-<h4>Email</h4>
-
-<p>Coming soon</p>
-
-</div>
-
-</div>
-
-</div>
-
 <div class="contact-card">
-
-<h3 style="margin-bottom:20px;">
-Student Results
-</h3>
-
-<p style="color:#667085;margin-bottom:25px;">
-
-Parents and students can access academic
-results through the Laziron online results system.
-
-</p>
-
-<a href="#" class="btn btn-primary">
-
-View Student Results →
-
-</a>
-
+<h3 style="margin-bottom:20px;">Student Results</h3>
+<p style="color:#667085;margin-bottom:25px;">Parents and students can access academic results through the Laziron online results system.</p>
+<a href="#" class="btn btn-primary">View Student Results →</a>
 </div>
-
 </div>
-
 </div>
-
 </section>
 
 <!-- FOOTER -->
-
 <footer>
-
 <div class="container">
-
 <div class="footer-grid">
-
 <div>
-
 <h3>The Laziron Tuition Center</h3>
-
-<p>
-Quality tuition, academic support and
-English learning for a brighter future.
-</p>
-
+<p>Quality tuition, academic support and English learning for a brighter future.</p>
 </div>
-
 <div>
-
 <h3>Quick Links</h3>
-
 <a href="#home">Home</a>
-
 <a href="#about">About</a>
-
 <a href="#courses">Courses</a>
-
+<a href="#registration">Register</a>
 <a href="#contact">Contact</a>
-
 </div>
-
 <div>
-
 <h3>Programs</h3>
-
 <a href="#courses">Primary Tuition</a>
-
 <a href="#courses">Secondary Tuition</a>
-
 <a href="#courses">English Course</a>
-
 <a href="#courses">Exam Preparation</a>
-
 </div>
-
 </div>
-
-<div class="footer-bottom">
-
-© 2026 The Laziron Tuition Center.
-All Rights Reserved.
-
+<div class="footer-bottom">© 2026 The Laziron Tuition Center. All Rights Reserved.</div>
 </div>
-
-</div>
-
 </footer>
 
-<!-- WHATSAPP -->
-
-<a class="whatsapp"
-href="https://wa.me/255716668443"
-target="_blank"
-aria-label="Contact Laziron on WhatsApp">
-
-💬
-
-</a>
+<!-- WHATSAPP FLOAT -->
+<a class="whatsapp" href="https://wa.me/255716668443" target="_blank" aria-label="Contact Laziron on WhatsApp">💬</a>
 
 <!-- JAVASCRIPT -->
-
 <script>
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycby-js8PVy1thSIJXeal6DayERdbjBgaAnAz4WtWnXG9aaprY7uivyG73d9VAHI5yQz8RA/exec";
 
 function toggleMenu(){
-
-    document
-    .getElementById("navLinks")
-    .classList.toggle("active");
-
+  document.getElementById("navLinks").classList.toggle("active");
 }
 
 document.querySelectorAll(".nav-links a").forEach(function(link){
-
-    link.addEventListener("click",function(){
-
-        document
-        .getElementById("navLinks")
-        .classList.remove("active");
-
-    });
-
+  link.addEventListener("click",function(){
+    document.getElementById("navLinks").classList.remove("active");
+  });
 });
 
+document.querySelectorAll(".copy-btn").forEach(function(btn){
+  btn.addEventListener("click",function(){
+    const done = function(){
+      btn.textContent = "Copied";
+      setTimeout(function(){ btn.textContent = "Copy"; },1500);
+    };
+    if (navigator.clipboard) { navigator.clipboard.writeText(btn.dataset.copy).then(done); }
+    else { done(); }
+  });
+});
+
+document.getElementById("registrationForm").addEventListener("submit",function(e){
+  e.preventDefault();
+  const status = document.getElementById("formStatus");
+  const btn = document.getElementById("submitBtn");
+
+  if (!document.querySelector('input[name="subjects"]:checked')) {
+    status.className = "err";
+    status.textContent = "Choose at least one subject.";
+    document.getElementById("subjectsBox").scrollIntoView({behavior:"smooth",block:"center"});
+    return;
+  }
+
+  btn.disabled = true;
+  btn.textContent = "SENDING...";
+  status.textContent = "";
+
+  fetch(SCRIPT_URL,{method:"POST",mode:"no-cors",body:new FormData(this)})
+  .then(() => {
+    status.className = "ok";
+    status.textContent = "Thank you! Your registration was received. We will contact you soon.";
+    this.reset();
+  })
+  .catch(() => {
+    status.className = "err";
+    status.textContent = "Something went wrong. Try again or register via WhatsApp on 0716 668 443.";
+  })
+  .finally(() => {
+    btn.disabled = false;
+    btn.textContent = "SUBMIT REGISTRATION";
+  });
+});
 </script>
 
 </body>
