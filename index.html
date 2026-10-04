@@ -139,7 +139,9 @@ td{color:#475467}
 /* GALLERY */
 .gallery{background:#eef3f7}
 .gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
-.gallery-item{height:220px;border-radius:12px;overflow:hidden;background:#d9e2ec}
+.gallery-item{border-radius:12px;overflow:hidden;background:white;box-shadow:0 5px 20px rgba(0,0,0,.06)}
+.gallery-pic{height:220px;overflow:hidden;background:#d9e2ec}
+.gallery-name{text-align:center;padding:12px 10px;font-weight:600;font-size:15px;color:#102a43}
 .gallery-item img{width:100%;height:100%;object-fit:cover;transition:.4s}
 .gallery-item:hover img{transform:scale(1.08)}
 
@@ -222,7 +224,7 @@ section{padding:65px 0}
 <div class="container nav-container">
 <a href="#home" class="logo">
 <div class="logo-icon">L</div>
-<div class="logo-text"><strong>LAZORON</strong><large>TUITION CENTER</large></div>
+<div class="logo-text"><strong>LAZORON</strong><small>TUITION CENTER</small></div>
 </a>
 <div class="menu-btn" onclick="toggleMenu()">☰</div>
 <div class="nav-links" id="navLinks">
@@ -244,7 +246,7 @@ section{padding:65px 0}
 <div class="hero-content">
 <div class="hero-badge">QUALITY EDUCATION • BETTER FUTURE</div>
 <h1>Unlock Your <span>Academic Potential</span></h1>
-<p>Welcome to The Lazoron Tuition Center. We provide quality tuition,Correctly Compentecy Based Curriculum(CBC)Teaching Methods, academic support, examination preparation and English courses for learners of different ages.</p>
+<p>Welcome to The Lazoron Tuition Center. We provide quality tuition, Competency Based Curriculum (CBC) teaching methods, academic support, examination preparation and English courses for learners of different ages.</p>
 <div class="hero-buttons">
 <a href="#registration" class="btn btn-primary">Register Now →</a>
 <a href="#courses" class="btn btn-outline">Explore Courses</a>
@@ -314,7 +316,7 @@ section{padding:65px 0}
 <div class="container">
 <div class="section-title">
 <span>Why Lazoron?</span>
-<h2>A Better Learning Environment and Full Compentecy Based Curriculum Teaching Methodology</h2>
+<h2>A Better Learning Environment and Full Competency Based Curriculum Teaching Methodology</h2>
 </div>
 <div class="features-grid">
 <div class="feature"><div class="feature-number">01</div><h3>Focused Learning</h3><p>Lessons are designed to help learners understand concepts rather than simply memorize answers.</p></div>
@@ -509,9 +511,9 @@ section{padding:65px 0}
 <tr><td>Monday</td><td>--</td><td>Secondary</td><td>English Course</td></tr>
 <tr><td>Tuesday</td><td>--</td><td>Secondary</td><td>English Course</td></tr>
 <tr><td>Wednesday</td><td>--</td><td>Secondary</td><td>English</td></tr>
-<tr><td>Thursday</td><td>--</td><td>--</td><td>Eglish Course</td></tr>
+<tr><td>Thursday</td><td>--</td><td>--</td><td>English Course</td></tr>
 <tr><td>Friday</td><td>--</td><td>Secondary</td><td>English</td></tr>
-<tr><td>Saturday</td><td>Pre-from one</td><td>Pre-seven</td><td>English Course</td></tr>
+<tr><td>Saturday</td><td>Pre-Form One</td><td>Pre-Seven</td><td>English Course</td></tr>
 </table>
 </div>
 </div>
@@ -526,12 +528,12 @@ section{padding:65px 0}
 <p>A glimpse of our learning environment and activities.</p>
 </div>
 <div class="gallery-grid">
-<div class="gallery-item"><img src="classroom.jpg" alt="Lazoron classroom"></div>
-<div class="gallery-item"><img src="students.jpg" alt="Students learning"></div>
-<div class="gallery-item"><img src="teacher.jpg" alt="Teacher teaching">Mr Mataptap</div>
-<div class="gallery-item"><img src="activity.jpg" alt="Student activity"></div>
-  <div class="gallery-item"><img src="finya.jpg" alt="finya">Professional chemistrist (Mr finya)</div>
-  <div class="gallery-item"><img src="tuition.jpg" alt="tuition"></div>
+<div class="gallery-item"><div class="gallery-pic"><img src="classroom.jpg" alt="Lazoron classroom"></div><div class="gallery-name">Classroom</div></div>
+<div class="gallery-item"><div class="gallery-pic"><img src="students.jpg" alt="Students learning"></div><div class="gallery-name">Students</div></div>
+<div class="gallery-item"><div class="gallery-pic"><img src="teacher.jpg" alt="Teacher teaching"></div><div class="gallery-name">Mr Mataptap</div></div>
+<div class="gallery-item"><div class="gallery-pic"><img src="activity.jpg" alt="Student activity"></div><div class="gallery-name">Activity</div></div>
+<div class="gallery-item"><div class="gallery-pic"><img src="finya.jpg" alt="Mr Finya"></div><div class="gallery-name">Professional Chemist (Mr Finya)</div></div>
+<div class="gallery-item"><div class="gallery-pic"><img src="tuition.jpg" alt="Tuition"></div><div class="gallery-name">Tuition</div></div>
 </div>
 </div>
 </section>
