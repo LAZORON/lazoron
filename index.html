@@ -43,7 +43,7 @@ section{padding:90px 0}
 
 /* HERO */
 .hero{min-height:650px;display:flex;align-items:center;position:relative;
-background:linear-gradient(90deg,rgba(9,35,56,.95),rgba(9,35,56,.70),rgba(9,35,56,.25)),url("tuition.jpg");
+background:linear-gradient(90deg,rgba(9,35,56,.95),rgba(9,35,56,.70),rgba(9,35,56,.25)),url("tuition.jpg"),linear-gradient(135deg,#102a43,#1d4e75);
 background-size:cover;background-position:center}
 .hero-content{max-width:760px;color:white}
 .hero-badge{display:inline-block;background:rgba(243,167,18,.15);border:1px solid rgba(243,167,18,.5);color:#ffd166;padding:8px 15px;border-radius:30px;margin-bottom:20px;font-size:14px;font-weight:600}
@@ -70,7 +70,7 @@ background-size:cover;background-position:center}
 /* ABOUT */
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
 .about-image{min-height:430px;border-radius:20px;
-background:linear-gradient(rgba(16,42,67,.15),rgba(16,42,67,.15)),url("students.jpg");
+background:linear-gradient(rgba(16,42,67,.15),rgba(16,42,67,.15)),url("students.jpg"),linear-gradient(135deg,#102a43,#1d4e75);
 background-size:cover;background-position:center}
 .about-content h2{font-size:40px;color:#102a43;margin:10px 0 20px}
 .about-content p{color:#667085;margin-bottom:18px}
@@ -163,6 +163,8 @@ footer a{display:block;margin:8px 0}
 .whatsapp{position:fixed;right:20px;bottom:20px;width:58px;height:58px;border-radius:50%;background:#25D366;color:white;display:flex;align-items:center;justify-content:center;font-size:27px;box-shadow:0 5px 20px rgba(0,0,0,.2);z-index:2000}
 
 
+.reg-group{margin-top:14px}
+.reg-group-title{font-family:"Poppins",sans-serif;font-weight:700;font-size:20px;color:#102a43;background:#fff4d6;border-left:6px solid #f3a712;padding:12px 16px;border-radius:0 8px 8px 0;margin-top:10px}
 /* FEES */
 .fees{background:white}
 .fees-box{max-width:700px;margin:auto;background:#f7f9fc;border:1px solid #e4e7ec;border-radius:15px;padding:30px}
@@ -242,7 +244,7 @@ section{padding:65px 0}
 <div class="hero-content">
 <div class="hero-badge">QUALITY EDUCATION • BETTER FUTURE</div>
 <h1>Unlock Your <span>Academic Potential</span></h1>
-<p>Welcome to The Lazoron Tuition Center. We provide quality tuition, Correctly Compentecy Based Curriculum (CBC)Teaching methods,academic support, examination preparation and English courses for learners of different ages.</p>
+<p>Welcome to The Lazoron Tuition Center. We provide quality tuition,Correctly Compentecy Based Curriculum(CBC)Teaching Methods, academic support, examination preparation and English courses for learners of different ages.</p>
 <div class="hero-buttons">
 <a href="#registration" class="btn btn-primary">Register Now →</a>
 <a href="#courses" class="btn btn-outline">Explore Courses</a>
@@ -279,7 +281,7 @@ section{padding:65px 0}
 <li>Qualified and dedicated teaching support</li>
 <li>Focused academic assistance</li>
 <li>Examination preparation</li>
-<li>English Language Development</li>
+<li>English language development</li>
 <li>Supportive learning environment</li>
 </ul>
 <a href="#registration" class="btn btn-primary">Join Lazoron</a>
@@ -312,7 +314,7 @@ section{padding:65px 0}
 <div class="container">
 <div class="section-title">
 <span>Why Lazoron?</span>
-<h2>A Better Learning Environment and Full compitency Based curriculum Teaching Methodology</h2>
+<h2>A Better Learning Environment and Full Compentecy Based Curriculum Teaching Methodology</h2>
 </div>
 <div class="features-grid">
 <div class="feature"><div class="feature-number">01</div><h3>Focused Learning</h3><p>Lessons are designed to help learners understand concepts rather than simply memorize answers.</p></div>
@@ -348,7 +350,6 @@ section{padding:65px 0}
 </div>
 </div>
 </section>
-
 
 <!-- REGISTRATION FORM -->
 <section class="reg-section" id="registration">
@@ -505,12 +506,12 @@ section{padding:65px 0}
 <div class="table-wrapper">
 <table>
 <tr><th>Day</th><th>Morning</th><th>Afternoon</th><th>Evening</th></tr>
-<tr><td>Monday</td><td>Primary</td><td>Secondary</td><td>English</td></tr>
-<tr><td>Tuesday</td><td>Primary</td><td>Secondary</td><td>Revision</td></tr>
-<tr><td>Wednesday</td><td>Primary</td><td>Secondary</td><td>English</td></tr>
-<tr><td>Thursday</td><td>Primary</td><td>Secondary</td><td>Revision</td></tr>
-<tr><td>Friday</td><td>Primary</td><td>Secondary</td><td>English</td></tr>
-<tr><td>Saturday</td><td>Revision</td><td>Exam Practice</td><td>—</td></tr>
+<tr><td>Monday</td><td>--</td><td>Secondary</td><td>English Course</td></tr>
+<tr><td>Tuesday</td><td>--</td><td>Secondary</td><td>English Course</td></tr>
+<tr><td>Wednesday</td><td>--</td><td>Secondary</td><td>English</td></tr>
+<tr><td>Thursday</td><td>--</td><td>--</td><td>Eglish Course</td></tr>
+<tr><td>Friday</td><td>--</td><td>Secondary</td><td>English</td></tr>
+<tr><td>Saturday</td><td>Pre-from one</td><td>Pre-seven</td><td>English Course</td></tr>
 </table>
 </div>
 </div>
@@ -528,8 +529,10 @@ section{padding:65px 0}
 <div class="gallery-item"><img src="classroom.jpg" alt="Lazoron classroom"></div>
 <div class="gallery-item"><img src="students.jpg" alt="Students learning"></div>
 <div class="gallery-item"><img src="teacher.jpg" alt="Teacher teaching"></div>
-<div class="gallery-item"><img src="activity.jpg" alt="Student activity"></div> 
+<div class="gallery-item"><img src="activity.jpg" alt="Student activity"></div>
   <div class="gallery-item"><img src="finya.jpg" alt="finya"></div>
+  <div class="gallery-item"><img src="tuition.jpg" alt="tuition"></div>
+</div>
 </div>
 </section>
 
